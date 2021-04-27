@@ -55,9 +55,9 @@ async function getAllRecords() {
   const params = {
     TableName: dynamodbTableName
   }
-  const allProducts = await scanDynamoRecords(params, []);
+  const allRecords = await scanDynamoRecords(params, []);
   const body = {
-    products: allProducts
+    records: allRecords
   }
   return buildResponse(200, body);
 }
